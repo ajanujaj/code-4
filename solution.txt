@@ -1,0 +1,25 @@
+def fun(s,count,s_letter,y_letter):
+    string =[x for x in s]
+    
+    a=0
+    
+    if s_letter in s:
+        for i in range(len(string)):
+            if(s_letter==string[i]):
+                count-=1
+                if(count==0):
+                    a=i
+    
+    if(count==0):        
+        string[a]=y_letter
+        
+    return ''.join(string)  
+            
+    
+
+s=input("enter string :- ")
+count=int(input('enter lenth:- '))
+s_letter= input('enter letter to be replaced :- ')
+y_letter= input('enter letter by replaced:- ')
+
+print(fun(s,count,s_letter,y_letter))
